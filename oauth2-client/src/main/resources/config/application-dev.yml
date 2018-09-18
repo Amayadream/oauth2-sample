@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: oauth2-client
+
+  # jpa config
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+
+  # datasource config
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/oauth_client?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 20
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  # redis
+  redis:
+    host: 118.31.42.204
+    port: 6379
+    database: 27
+    password: dev@Mo9.com
+
+server:
+  port: 8888
+
